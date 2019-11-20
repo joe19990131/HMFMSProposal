@@ -2,7 +2,7 @@
     margin-top:50px;
     margin-left:1em;
     margin-bottom: 1em;
-    width: 570px;
+    width: 500px;
     height: 120px;
 }
 ul {
@@ -44,7 +44,6 @@ ul {
       padding-left: 20px;
       background-color:#bababa;
       border-radius: 5px;
-
     }
   .main_func_text{
       color: #ffffff;
@@ -54,13 +53,3 @@ ul {
   .main_func:hover{
     background-color: #969696;
   }
-  .hide_selecter{
-    margin-bottom: 5px;
-    margin-top: 10px;
-    margin-left: 25px;
-    background-color: #ffffff;
-    width: 100%;
-  }
-.inputer{
-  margin: 20px;
-}
