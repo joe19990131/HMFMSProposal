@@ -59,8 +59,17 @@ ul {
     margin-top: 10px;
     margin-left: 25px;
     background-color: #ffffff;
-    width: 100%;
+    width: 25%;
+    overflow: hidden;
   }
 .inputer{
   margin: 20px;
+}
+.inparea{
+  width: 250px;
+  float:right;
+}
+.form-btn{
+  float: right;
+  margin-right: 20px;
 }
