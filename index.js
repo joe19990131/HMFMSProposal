@@ -1,4 +1,4 @@
-var mysql = require('mysql');
+/*var mysql = require('mysql');
 var conn = mysql.createConnection({
   host : 'localhost',
   port:'3306',
@@ -11,10 +11,31 @@ var conn = mysql.createConnection({
   if(err) throw err;
   console.log('connect success!');
   });
+*/
 var express = require("express");
 var app = express();
+
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
+const { window } = new JSDOM(`<!DOCTYPE html>`);
+
 app.get("/", function(req, res) {
-  res.sendfile(__dirname + '/index.html', function(err) {
+  res.sendfile(__dirname + '/views/index.html', function(err) {
+      if (err) res.send(404);
+  });
+});
+app.get("/locationSelecter", function(req, res) {
+  res.sendfile(__dirname + '/views/locationSelecter.html', function(err) {
+      if (err) res.send(404);
+  });
+});
+app.get("/newEquitment", function(req, res) {
+  res.sendfile(__dirname + '/views/newEquitment.html', function(err) {
+      if (err) res.send(404);
+  });
+});
+app.get("/newLocation", function(req, res) {
+  res.sendfile(__dirname + '/views/newLocation.html', function(err) {
       if (err) res.send(404);
   });
 });
