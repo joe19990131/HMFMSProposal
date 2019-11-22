@@ -35,11 +35,11 @@ ul {
     background-color: #4CAF50;
   }
   .main_func{
-      width: 95%;
+      width: 30%;
       height: 45px;
       margin: 10px;
       margin-bottom: 0px;
-      margin-left: 20px;
+      margin-left: 10px;
       margin-right: 20px;
       padding-left: 20px;
       background-color:#bababa;
@@ -73,4 +73,8 @@ ul {
 .form-btn{
   float: right;
   margin-right: 20px;
+}
+#menu{
+  border-right-width: 1px;
+  border-right-color: #111;
 }

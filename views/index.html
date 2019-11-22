@@ -20,10 +20,11 @@
         <li><a href="/newEquitment">新增設備</a></li>
         <li><a href="/newLocation">新增地點</a></li>
     </ul>
-    <div class="main_func" id="selectByEq_fbtn">
-        <div class="main_func_text">使用設備資料搜尋</div>
-    </div>
-    <div class ="hide_selecter" id="selectByEquit">
+    <div id="menu">
+        <div class="main_func" id="selectByEq_fbtn">
+                <div class="main_func_text">使用設備資料搜尋</div>
+        </div>
+        <div class ="hide_selecter" id="selectByEquit">
             <form action="" method="post">
                 <div class="inputer">
                         設備ID：<input type="text" name="OID" class="inparea">
@@ -72,15 +73,15 @@
             </form>
         </div>
    
-    <div class="main_func" id="selectByLoc_fbtn">
-            <div class="main_func_text">使用放置地點搜尋</div>
-        </div>
-    <div class ="hide_selecter" id="selectByLoc">
-        <form action="" method="post">
-                <div class="inputer">
-                        地點ID：<input type="text" name="LocID" class="inparea">
+        <div class="main_func" id="selectByLoc_fbtn">
+                <div class="main_func_text">使用放置地點搜尋</div>
                 </div>
-                <div class="inputer">
+        <div class ="hide_selecter" id="selectByLoc">
+                <form action="" method="post">
+                        <div class="inputer">
+                                地點ID：<input type="text" name="LocID" class="inparea">
+                        </div>
+                        <div class="inputer">
                                 館別：<select name="BID" class="inparea">
                                         <option value ="">請選擇</option>
                                         <option value="a">5型</option>
@@ -122,7 +123,7 @@
                         
                     </form>
                 </div>
-                
+        </div>       
 </body>
 <script>
 $(document).ready(function(){
