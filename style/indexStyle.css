@@ -59,7 +59,7 @@ ul {
     margin-top: 10px;
     margin-left: 25px;
     background-color: #ffffff;
-    width: 95%;
+    width: 33%;
     overflow: hidden;
   }
 .inputer{
@@ -71,18 +71,12 @@ ul {
 }
 .form-btn{
   float: right;
-  margin-right: 20px;
+  margin: 10px;
 }
-#menu{
-  border-right-width: 1px;
-  border-right-color: #111;
-  float: left;
-}
-#data_grid{
-  width: 900px;
-  height: 500px;
-  background-color: aquamarine;
-  float: left;
+.quick-btn-area{
+  float: right;
+  width: 33%;
+  
 }
 
 @media only screen and (min-width: 768px) {
