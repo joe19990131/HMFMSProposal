@@ -34,3 +34,63 @@ ul {
   .active {
     background-color: #4CAF50;
   }
+  .main_func{
+    width: 100%;
+    height: 45px;
+    margin: 10px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+    margin-right: 20px;
+    padding-left: 20px;
+    background-color:#bababa;
+    border-radius: 5px;
+
+  }
+.main_func_text{
+    color: #ffffff;
+    float: left;
+    margin-top: 12px;
+}
+.main_func:hover{
+  background-color: #969696;
+}
+.hide_selecter{
+  margin-bottom: 5px;
+  margin-top: 10px;
+  margin-left: 25px;
+  background-color: #ffffff;
+  width: 33%;
+  overflow: hidden;
+}
+.inputer{
+margin: 20px;
+}
+.inparea{
+width: 250px;
+float:right;
+}
+.form-btn{
+float: right;
+margin: 10px;
+}
+.quick-btn-area{
+float: right;
+width: 33%;
+
+}
+
+@media only screen and (min-width: 768px) {
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+}

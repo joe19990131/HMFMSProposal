@@ -143,7 +143,13 @@
 </body>
 <script>
 $(document).ready(function(){
-  
+        $("#selectByEq_fbtn").click(function(){
+                $("#selectByEquit").toggle();
+        })
+        $("#selectByLoc_fbtn").click(function(){
+                $("#selectByLoc").toggle();
+        })
+        $("#expDatepicker").kendoDatePicker({ value: new Date(), format: "yyyy/MM/dd" });
 });
 </script>
 </html>
