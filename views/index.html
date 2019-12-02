@@ -24,7 +24,7 @@
         <li><a href="/newEquitment">新增設備</a></li>
         <li><a href="/newLocation">新增地點</a></li>
     </ul>
-    <div id="menu" class="col-11">
+    <div id="menu">
         <div class="main_func" id="selectByEq_fbtn">
                 <div class="main_func_text">使用設備資料搜尋</div>
         </div>
@@ -66,10 +66,10 @@
                             </select>
                 </div>
                 <div class="inputer">
-                        使用期限：<input type="date" name="EXPdate" class="inparea">
+                        使用期限：<input type="date" name="EXPdate" class="inparea" id="expDatepicker">
                 </div>
 
-                <div id="quick-btn-area">
+                <div class="quick-btn-area">
                         <button id="locErrEQ_searcher" class="btn btn-default quick-btn">異位設備查詢</button>
                         <button id="lossEQ_searcher" class="btn btn-default quick-btn">遺失設備查詢</button>
                         <button id="discardEQ_searcher" class="btn btn-default quick-btn">廢棄設備查詢</button>
@@ -127,6 +127,10 @@
                                         <option value="001">a place</option>
                                         <option value="002">b place</option>
                                     </select>
+                        </div>
+                        <div class="quick-btn-area">
+                                <button id="locErrEQ_searcher" class="btn btn-default quick-btn">廢棄地點查詢</button>
+                                
                         </div>
                         <div class="form-btn">
                                 <button class="btn btn-default">取消</button>
