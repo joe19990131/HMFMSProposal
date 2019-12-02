@@ -34,3 +34,20 @@ ul {
   .active {
     background-color: #4CAF50;
   }
+  #form-div{
+    width: 30%;
+  }
+  .form-group{
+    margin: 30px;
+    height: 30px;
+    }
+    .inparea{
+    width: 250px;
+    height: 30px;
+    float:right;
+    }
+    .form-btn{
+    margin: 10px;
+    margin-right: 45px;
+    float: right
+    }
