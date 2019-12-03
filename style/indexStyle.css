@@ -29,29 +29,34 @@ ul {
   
   li a:hover:not(.active) {
     background-color: #111;
+    color: white;
   }
   
   .active {
     background-color: #4CAF50;
+  }
+  .active:hover{
+    color: white;
   }
   #menu{
     padding-left: 80px;
     padding-right: 80px;
   }
   .main_func{
-      width: 100%;
       height: 45px;
       margin: 10px;
       margin-bottom: 0px;
+      margin-left: 3%;
+      margin-right: 3%;
       padding-left: 20px;
-      background-color:#bababa;
+      background-color:#c2c2c2;
       border-radius: 5px;
 
     }
   .main_func_text{
       color: #ffffff;
       float: left;
-      margin-top: 12px;
+      margin-top: 14px;
   }
   .main_func:hover{
     background-color: #969696;

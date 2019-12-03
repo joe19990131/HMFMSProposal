@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="/style/indexStyle.css">
+    <link rel="stylesheet" href="/style/locSelecterStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/kendo/css/kendo.common-material.min.css">
@@ -27,40 +27,45 @@
 
 
     <div class="main_func" id="select_fbtn">
-            <div class="main_func_text">使用設備資料搜尋</div>
+            <h4 class="main_func_text">地點查詢</h4>
     </div>
     <div class ="hide_selecter" id="select">
-        <form action="" method="post">
-            <div class="inputer">
-                    地點ID：<input type="text" name="LocID" class="inparea">
-            </div>
-            <div class="inputer">
-                    地點名稱：<select name="LocName" class="inparea">
-                            <option value ="">請選擇</option>
-                            <option value ="">701</option>
-                            <option value ="">702</option>
-                            <option value ="">703</option>
-                    </select>
-            </div>
-            <div class="inputer">
-                    分院：<select name="hid" class="inparea">
-                            <option value ="">請選擇</option>
-                            <option value="a">總院</option>
-                            <option value="b">汐止分院</option>
-                            <option value="c">新竹分院</option>
-                        </select>
-            </div>
-            <div class="inputer">
-                    館別：<select name="bid" class="inparea">
-                            <option value ="">請選擇</option>
-                            <option value="a1">總院本館</option>
-                            <option value="a2">總院一館</option>
-                            <option value="a3">總院二館</option>
-                    </select>
-            </div>
-            <div class="inputer">
-                    樓層：<input type="text" name="bfloor" class="inparea">
-            </div>
+        <form action="search-loc" method="post">
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">地點名稱</label>
+                        <div class="col-md-9">
+                                <input type="text" name="LocID" class="form-control">        
+                        </div>
+                </div>
+                
+
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">地點名稱</label>
+                        <div class="col-md-9">
+                        <select id="_loc_name" class=" form-control"></select>
+                        </div>
+                </div>
+
+            <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">分院</label>
+                        <div class="col-md-9">
+                        <select id="hid" class=" form-control"></select>
+                        </div>
+                </div>
+
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">館別</label>
+                        <div class="col-md-9">
+                        <select id="bid" class=" form-control"></select>
+                        </div>
+                </div>
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">樓層</label>
+                        <div class="col-md-9">
+                        <select id="bfloor" class=" form-control"></select>
+                        </div>
+                </div>
+
             <div id="quick-btn-area">
                     <button id="discardEQ_searcher" class="btn btn-default quick-btn">廢棄地點查詢</button>
             </div>
@@ -73,11 +78,13 @@
             
         </form>
     </div>
+    <hr id="underline" class="style-one" />
 </body>
 <script>
 $(document).ready(function(){
         $("#select_fbtn").click(function(){
                 $("#select").toggle();
+                $("#underline").toggle();
         })
 });
 </script>

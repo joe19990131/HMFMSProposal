@@ -29,35 +29,37 @@ ul {
   
   li a:hover:not(.active) {
     background-color: #111;
+    color: rgb(255, 255, 255);
   }
   
   .active {
     background-color: #4CAF50;
   }
+  .active:hover{
+    color: white;
+  }
   .main_func{
-    width: 100%;
     height: 45px;
     margin: 10px;
     margin-bottom: 0px;
-    margin-left: 10px;
-    margin-right: 20px;
+    margin-left: 3%;
+    margin-right: 3%;
     padding-left: 20px;
-    background-color:#bababa;
+    background-color:#c2c2c2;
     border-radius: 5px;
-
   }
 .main_func_text{
     color: #ffffff;
     float: left;
-    margin-top: 12px;
+    margin-top: 14px;
 }
 .main_func:hover{
   background-color: #969696;
 }
 .hide_selecter{
   margin-bottom: 5px;
-  margin-top: 10px;
-  margin-left: 25px;
+  margin-top: 30px;
+  margin-left: 4%;
   background-color: #ffffff;
   width: 33%;
   overflow: hidden;
@@ -72,25 +74,22 @@ float:right;
 .form-btn{
 float: right;
 margin: 10px;
+margin-right: 0px;
 }
 .quick-btn-area{
 float: right;
-width: 33%;
 
 }
+.form-group{
+  margin-bottom: 30px;
+  height: 30px;
+  }
 
-@media only screen and (min-width: 768px) {
-/* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+  hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    margin-left: 3%;
+    margin-right: 3%;
 }
