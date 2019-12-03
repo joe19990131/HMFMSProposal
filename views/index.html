@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/style/indexStyle.css">
+    <link rel="stylesheet" href="/HMFMSProposal/style/indexStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/kendo/css/kendo.common-material.min.css">
@@ -16,7 +16,7 @@
 
 </head>
 <body>
-    <img src = "/picture/homeTitlePicture.jpg" id="homeTitlePicture">
+    <img src = "/HMFMSProposal/picture/homeTitlePicture.jpg" id="homeTitlePicture">
     <ul>
         <li><a class="active" href="#home">HMFMSystem</a></li>
         <li><a href="#index">設備查詢</a></li>
@@ -24,55 +24,53 @@
         <li><a href="/newEquitment">新增設備</a></li>
         <li><a href="/newLocation">新增地點</a></li>
     </ul>
-    <div id="menu">
         <div class="main_func" id="selectByEq_fbtn">
                 <h4 class="main_func_text">使用設備資料搜尋</h4>
         </div>
         <div class ="hide_selecter" id="selectByEquit">
             <form action="" method="post">
-                <div class="inputer">
-                        設備ID：<input type="text" name="OID" class="inparea">
-                </div>
-                <div class="inputer">
-                        型號：<select name="OblType" class="inparea">
-                                <option value ="">請選擇</option>
-                                <option value ="a">乾粉</option>
-                                <option value ="b">CO2</option>
-                                <option value ="c">海龍</option>
-                        </select>
-                </div>
-                <div class="inputer">
-                        規格：<select name="TypeSpec" class="inparea">
-                                <option value ="">請選擇</option>
-                                <option value="5">5型</option>
-                                <option value="10">10型</option>
-                                <option value="20">20型</option>
-                            </select>
-                </div>
-                <div class="inputer">
-                        磅數：<select name="Pounds" class="inparea">
-                                <option value ="">請選擇</option>
-                                <option value="5">5</option>
-                                <option value="10">10</option>
-                                <option value="15">15</option>
-                                <option value="20">20</option>
-                        </select>
-                </div>
-                <div class="inputer">
-                        狀態：<select name="CSID" class="inparea">
-                                <option value ="">請選擇</option>
-                                <option value="n1">正常</option>
-                                <option value="n2">水壓正常</option>
-                            </select>
-                </div>
-                <div class="inputer">
-                        使用期限：<input type="date" name="EXPdate" class="inparea" id="expDatepicker">
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">設備ID</label>
+                        <div class="col-md-9">
+                                <input type="text" name="OID" class="form-control" id="oid_inputer">        
+                        </div>
                 </div>
 
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">型號</label>
+                        <div class="col-md-9">
+                        <select id="ot_selecter" class=" form-control"></select>
+                        </div>
+                </div>
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">規格</label>
+                        <div class="col-md-9">
+                        <select id="ts_selecter" class=" form-control"></select>
+                        </div>
+                </div>
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">磅數</label>
+                        <div class="col-md-9">
+                        <select id="pound_selecter" class=" form-control"></select>
+                        </div>
+                </div>
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">狀態</label>
+                        <div class="col-md-9">
+                        <select id="cs_selecter" class=" form-control"></select>
+                        </div>
+                </div>
+
+                <div class="form-group row">
+                        <label class="col-md-3 control-label" style="margin-bottom: 20px;">使用期限</label>
+                        <div class="col-md-9">
+                                <input type="date" name="EXPdate" class="inparea" id="expDatepicker">
+                        </div>
+                </div>
                 <div class="quick-btn-area">
-                        <button id="locErrEQ_searcher" class="btn btn-default quick-btn">異位設備查詢</button>
-                        <button id="lossEQ_searcher" class="btn btn-default quick-btn">遺失設備查詢</button>
-                        <button id="discardEQ_searcher" class="btn btn-default quick-btn">廢棄設備查詢</button>
+                        <button id="locErrEQ_searcher" class="btn btn-default">異位設備查詢</button>
+                        <button id="lossEQ_searcher" class="btn btn-default">遺失設備查詢</button>
+                        <button id="discardEQ_searcher" class="btn btn-default">廢棄設備查詢</button>
                 </div>
 
                 <div class="form-btn">
@@ -91,56 +89,43 @@
                 </div>
         <div class ="hide_selecter" id="selectByLoc">
                 <form action="" method="post">
-                        <div class="inputer">
-                                地點ID：<input type="text" name="LocID" class="inparea">
+                        <div class="form-group row">
+                                <label class="col-md-3 control-label" style="margin-bottom: 20px;">地點ID</label>
+                                <div class="col-md-9">
+                                        <input type="text" name="LocID" class="form-control" id="locid_inputer">        
+                                </div>
                         </div>
-                        <div class="inputer">
-                                館別：<select name="BID" class="inparea">
-                                        <option value ="">請選擇</option>
-                                        <option value="a">5型</option>
-                                        <option value="b">10型</option>
-                                        <option value="c">20型</option>
-                                    </select>
+                        <div class="form-group row">
+                                <label class="col-md-3 control-label" style="margin-bottom: 20px;">館別</label>
+                                <div class="col-md-9">
+                                <select id="bid_selecter" class=" form-control"></select>
+                                </div>
                         </div>
-                        <div class="inputer">
-                                樓層：<select name="LocFloor" class="inparea">
-                                        <option value ="">請選擇</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="-1">B1</option>
-                                        <option value="-2">B2</option>
-                                </select>
+                        <div class="form-group row">
+                                <label class="col-md-3 control-label" style="margin-bottom: 20px;">樓層</label>
+                                <div class="col-md-9">
+                                <select id="bf_selecter" class=" form-control"></select>
+                                </div>
                         </div>
-                        <div class="inputer">
-                                地點：<select name="CSID" class="inparea">
-                                        <option value ="">請選擇</option>
-                                        <option value="001">a place</option>
-                                        <option value="002">b place</option>
-                                    </select>
+                        <div class="form-group row">
+                                <label class="col-md-3 control-label" style="margin-bottom: 20px;">地點</label>
+                                <div class="col-md-9">
+                                <select id="loc_selecter" class=" form-control"></select>
+                                </div>
                         </div>
                         <div class="quick-btn-area">
-                                <button id="locErrEQ_searcher" class="btn btn-default quick-btn">廢棄地點查詢</button>
+                                <button id="locErrEQ_searcher" class="btn btn-default">廢棄地點查詢</button>
                                 
                         </div>
                         <div class="form-btn">
                                 <button class="btn btn-default">取消</button>
-                        <button class="btn btn-danger">清除</button>
-                        <button type="submit" value="submit" class="btn btn-primary">查詢</button>
+                                <button class="btn btn-danger">清除</button>
+                                <button type="submit" value="submit" class="btn btn-primary">查詢</button>
                         </div>
                         
-                    </form>
-                </div>
+                </form>
         </div>
+        
         <div id="data_grid" class="col-12">
 
         </div>     
