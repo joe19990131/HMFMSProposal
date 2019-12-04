@@ -12,6 +12,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-image: url("/picture/barStyle.png");
+    background-size: cover;
     background-repeat: no-repeat;
   }
   

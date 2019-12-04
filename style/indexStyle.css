@@ -12,6 +12,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-image: url("/picture/barStyle.png");
+    background-size: cover;
     background-repeat: no-repeat;
   }
   
@@ -39,12 +40,12 @@ ul {
     color: white;
   }
 
-
+ 
   .main_fbtn{
       height: 45px;
       padding-left: 20px;
-      background-color:rgb(49, 47, 47);
-      
+      background-color:rgb(36, 36, 36);
+      width: 10%;
     }
 
   .main_func_text{
@@ -77,3 +78,4 @@ float: none;
   margin-bottom: 30px;
   height: 30px;
   }
+  
