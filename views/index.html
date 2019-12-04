@@ -23,8 +23,13 @@
         <li><a href="/newEquitment">新增設備</a></li>
         <li><a href="/newLocation">新增地點</a></li>
     </ul>
-        <div class="main_func" id="selectByEq_fbtn">
-                <h4 class="main_func_text">使用設備資料搜尋</h4>
+<div id="mainSelect_fbtn" class="main_fbtn" style="border-bottom: 2px solid rgb(65, 65, 65);">
+        <h4 class="main_func_text">搜尋</h4>
+</div>
+   
+<div id="select_area">
+        <div class="main_fbtn" id="selectByEq_fbtn">
+                <h4 class="main_func_text" style="margin-left: 20px;">使用設備資料搜尋</h4>
         </div>
         <div class ="hide_selecter" id="selectByEquit">
             <form action="" method="post">
@@ -82,10 +87,10 @@
             <div style="height: 40px;width:100%;float: none;"></div>
             
         </div>
-   
-        <div class="main_func" id="selectByLoc_fbtn">
-                <h4 class="main_func_text">使用放置地點搜尋</div>
-                </div>
+  
+        <div class="main_fbtn" id="selectByLoc_fbtn">
+                <h4 class="main_func_text" style="margin-left: 20px;">使用放置地點搜尋</h4>
+        </div>
         <div class ="hide_selecter" id="selectByLoc">
                 <form action="" method="post">
                         <div class="form-group row">
@@ -124,8 +129,9 @@
                         
                 </form>
         </div>
-        
-        <div id="data_grid" class="col-12">
+
+</div>       
+<div id="data_grid" class="col-12">
 
         </div>     
 </body>
@@ -133,10 +139,13 @@
 $(document).ready(function(){
         $("#selectByEq_fbtn").click(function(){
                 $("#selectByEquit").toggle();
-        })
+        });
         $("#selectByLoc_fbtn").click(function(){
                 $("#selectByLoc").toggle();
-        })
+        });
+        $("#mainSelect_fbtn").click(function(){
+                $("#select_area").toggle();
+        });
         $("#expDatePicker").kendoDatePicker({ value: new Date(), format: "yyyy/MM/dd" });
 
         $("#data-grid").kendoGrid(
