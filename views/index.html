@@ -80,7 +80,7 @@
                 <div class="form-btn">
                         <button class="btn btn-default">取消</button>
                 <button class="btn btn-danger">清除</button>
-                <button type="submit" value="submit" class="btn btn-primary">查詢</button>
+                <button type="submit" value="submit" class="btn btn-primary" id="selectByEq_btn">查詢</button>
                 </div>
                 
             </form>
@@ -124,7 +124,7 @@
                         <div class="form-btn">
                                 <button class="btn btn-default">取消</button>
                                 <button class="btn btn-danger">清除</button>
-                                <button type="submit" value="submit" class="btn btn-primary">查詢</button>
+                                <button type="submit" value="submit" class="btn btn-primary" id="selectByLoc_btn">查詢</button>
                         </div>
                         
                 </form>
@@ -151,6 +151,15 @@ $(document).ready(function(){
         $("#data-grid").kendoGrid(
 
         );
+        $("#selectByEq_btn").click(function(){
+                 
+
+                
+                //alert($("#oid_inputer").val());
+        })
 });
+function searchByEq(){
+        var oid = $("#oid_inputer").val();
+}
 </script>
 </html>
