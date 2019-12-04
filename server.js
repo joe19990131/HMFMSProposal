@@ -12,8 +12,27 @@ var conn = mysql.createConnection({
   console.log('connect success!');
   });
 */
-var express = require("express");
+var express = require("express"),
+    path = require('path'),
+    http = require('http'),
+    index = require('./routes/index'),
+    locationSelecter = require('./routes/locationSelecter'),
+    newEquitment  = require('./routes/newEquitment'),
+    newLocation = require('./routes/newLocation');
+
 var app = express();
+var bodyParser = require('body-Parser');
+var multer = require('multer'); 
+
+
+app.set('port', process.env.PORT || 3000);
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(bodyParser.json());  // parse application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(multer()); // for parsing multipart/form-data
+
+
 
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
