@@ -147,20 +147,17 @@ $(document).ready(function(){
                 $("#selectByLoc").toggle(200);
         });
         $("#mainSelect_fbtn").click(function(){
-                $("#select_area").toggle(400);
+                $("#select_area").toggle(200);
         });
         $("#expDatePicker").kendoDatePicker({ value: new Date(), format: "yyyy/MM/dd" });
 
         $("#data-grid").kendoGrid(
 
-        );
-        $("#selectByEq_btn").click(
-                
-        )
+        ); 
 });
 function searchByEq(){
         var oid = $("#oid_inputer").val();
-        alert($("#oid_inputer").val());
+        //alert($("#oid_inputer").val());
 }
 </script>
 </html>
