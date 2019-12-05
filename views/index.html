@@ -28,6 +28,7 @@
 </div>
    
 <div id="select_area">
+<div ></div>
         <div class="main_fbtn" id="selectByEq_fbtn">
                 <h5 class="main_func_text">使用設備資料搜尋</h5>
         </div>
@@ -129,7 +130,7 @@
                         
                 </form>
         </div>
-<div style="background-color: rgb(49,47,47); height: 20px; width: 10%;"></div>
+        <div style="background-color: rgb(49, 47, 47);height: 5px;"></div>
 </div>       
 <div id="data_grid" class="col-12">
 
@@ -150,14 +151,67 @@ $(document).ready(function(){
                 $("#select_area").toggle(200);
         });
         $("#expDatePicker").kendoDatePicker({ value: new Date(), format: "yyyy/MM/dd" });
-
-        $("#data-grid").kendoGrid(
-
-        ); 
+        $("#oid_inputer").kendoMaskedTextBox(); 
+        $("#locid_inputer").kendoMaskedTextBox(); 
+        
 });
-function searchByEq(){
-        var oid = $("#oid_inputer").val();
-        //alert($("#oid_inputer").val());
-}
+$("#selectByEq_btn").click(function () {
+        if (gridCount != 0) {
+            $("#book_grid").data('kendoGrid').destroy();
+        }
+       
+        gridCount++;
+        var data = {
+            "oid": $('#oid_inputer').val(),
+            "objectType": $('#ot_selecter').val(),
+            "typeSpec": $('#ts_selecter').val(),
+            "pound": $('#pound_selecter').val(),
+            "cs": $('#cs_selecter').val(),
+            "expDate": $('#expDatePicker').val()
+        };
+        $("#book_grid").kendoGrid({
+            dataSource: {
+                transport: {
+                    read: {
+                        method: "post",
+                        url: "/index/searchByEq",
+                        dataType: "json",
+                        data: data
+                    }
+                },
+                schema: {
+                    model: {
+                        fields: {
+                            oid: { type: "int" },
+                            objectType: { type: "int" },
+                            typeSpec: { type: "string" },
+                            pound: { type: "string" },
+                            cs: { type: "string" },
+                            expDate: { type: "datetime" }
+                            //here
+                        }
+                    }
+                },
+                pageSize: 20,
+            },
+            height: 550,
+            sortable: true,
+            pageable: {
+                input: true,
+                numeric: false
+            },
+            columns: [
+                { field: "BookClass", title: "書籍種類", width: "15%" },
+                { field: "BookName", title: "書籍名稱", width: "25%" },
+                { field: "BoughtDate", title: "購買日期", width: "10%" },
+                { field: "BookStatus", title: "書籍狀態", width: "10%" },
+                { field: "BookKeeper", title: "借閱人", width: "9%" },
+                { command: { text: "借閱紀錄", click: lendRecord }, title: " ", width: "80px" },
+                { command: { text: "編輯", click: editBook }, title: " ", width: "80px" },
+                { command: { text: "刪除", click: deleteBook }, title: " ", width: "80px" }
+            ]
+
+        });
+    })
 </script>
 </html>

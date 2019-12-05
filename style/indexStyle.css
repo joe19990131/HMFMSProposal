@@ -44,17 +44,20 @@ ul {
   .main_fbtn{
       height: 45px;
       padding-left: 20px;
-      background-color:rgb(36, 36, 36);
-      width: 10%;
+      background-color:rgb(104, 104, 104);
+      width: 100%;
     }
 
+#mainSelect_fbtn:hover{
+  background-color: #111;
+}
   .main_func_text{
       color: #ffffff;
       float: left;
       margin-top: 14px;
   }
   .main_fbtn:hover{
-    background-color: #111;
+    background-color: rgb(32, 32, 32);
   }
   .hide_selecter{
     margin-bottom: 5px;

@@ -15,7 +15,7 @@
 </head>
 <body>
         <img src = "/picture/homeTitlePicture.jpg" id="homeTitlePicture">
-        <ul>
+        <ul style="margin-bottom: 2px;">
             <li><a class="active" href="#home">HMFMSystem</a></li>
             <li><a href="/">設備查詢</a></li>
             <li><a href="#locationSelecter">地點查詢</a></li>
@@ -33,7 +33,7 @@
                 <div class="form-group row">
                         <label class="col-md-3 control-label" style="margin-bottom: 20px;">地點名稱</label>
                         <div class="col-md-9">
-                                <input type="text" name="LocID" class="form-control">        
+                                <input type="text" name="LocID" class="form-control" id="locid_inputer">        
                         </div>
                 </div>
                 
@@ -81,10 +81,13 @@
 </body>
 <script>
 $(document).ready(function(){
+        $("#select").hide();
+        $("#underline").hide();
         $("#select_fbtn").click(function(){
-                $("#select").toggle();
-                $("#underline").toggle();
+                $("#select").toggle(200);
+                $("#underline").toggle(200);
         })
+        $("#locid_inputer").kendoMaskedTextBox(); 
 });
 </script>
 </html>

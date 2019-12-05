@@ -41,21 +41,19 @@ ul {
   }
   .main_func{
     height: 45px;
-    margin: 10px;
+    width: 100%;
     margin-bottom: 0px;
-    margin-left: 3%;
-    margin-right: 3%;
     padding-left: 20px;
-    background-color:#c2c2c2;
-    border-radius: 5px;
+    background-color:rgb(49, 47, 47);
   }
+ 
 .main_func_text{
     color: #ffffff;
     float: left;
     margin-top: 14px;
 }
 .main_func:hover{
-  background-color: #969696;
+  background-color: #111;
 }
 .hide_selecter{
   margin-bottom: 5px;
