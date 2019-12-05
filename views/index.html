@@ -153,23 +153,7 @@ $(document).ready(function(){
         $("#expDatePicker").kendoDatePicker({ value: new Date(), format: "yyyy/MM/dd" });
         $("#oid_inputer").kendoMaskedTextBox(); 
         $("#locid_inputer").kendoMaskedTextBox(); 
-        
-});
-$("#selectByEq_btn").click(function () {
-        if (gridCount != 0) {
-            $("#book_grid").data('kendoGrid').destroy();
-        }
-       
-        gridCount++;
-        var data = {
-            "oid": $('#oid_inputer').val(),
-            "objectType": $('#ot_selecter').val(),
-            "typeSpec": $('#ts_selecter').val(),
-            "pound": $('#pound_selecter').val(),
-            "cs": $('#cs_selecter').val(),
-            "expDate": $('#expDatePicker').val()
-        };
-        $("#book_grid").kendoGrid({
+        $("#data_grid").kendoGrid({
             dataSource: {
                 transport: {
                     read: {
@@ -187,7 +171,8 @@ $("#selectByEq_btn").click(function () {
                             typeSpec: { type: "string" },
                             pound: { type: "string" },
                             cs: { type: "string" },
-                            expDate: { type: "datetime" }
+                            manufaDate: { type: "datetime" },
+                            expDate: { type: "datetime" },
                             //here
                         }
                     }
@@ -201,17 +186,35 @@ $("#selectByEq_btn").click(function () {
                 numeric: false
             },
             columns: [
-                { field: "BookClass", title: "書籍種類", width: "15%" },
-                { field: "BookName", title: "書籍名稱", width: "25%" },
-                { field: "BoughtDate", title: "購買日期", width: "10%" },
-                { field: "BookStatus", title: "書籍狀態", width: "10%" },
-                { field: "BookKeeper", title: "借閱人", width: "9%" },
-                { command: { text: "借閱紀錄", click: lendRecord }, title: " ", width: "80px" },
+                { field: "oid", title: "ID", width: "10%" },
+                { field: "cs", title: "狀態", width: "10%" },
+                { field: "objType", title: "型號", width: "15%" },
+                { field: "typeSpec", title: "規格", width: "15%" },
+                { field: "manufaDate", title: "製造日期", width: "20%" },
+                { field: "expDate", title: "使用期限", width: "20%" },
                 { command: { text: "編輯", click: editBook }, title: " ", width: "80px" },
                 { command: { text: "刪除", click: deleteBook }, title: " ", width: "80px" }
             ]
 
         });
+});
+var gridCount = 0;
+$("#selectByEq_btn").click(function () {
+        if (gridCount != 0) {
+            $("#data_grid").data('kendoGrid').destroy();
+        }
+       
+        gridCount++;
+        var data = {
+            "oid": $('#oid_inputer').val(),
+            "objectType": $('#ot_selecter').val(),
+            "typeSpec": $('#ts_selecter').val(),
+            "pound": $('#pound_selecter').val(),
+            "cs": $('#cs_selecter').val(),
+            "expDate": $('#expDatePicker').val()
+        };
+        
     })
+   
 </script>
 </html>
